@@ -19,14 +19,6 @@
       url: "https://localhost:3000",
     };
     Upsell.Widget.show(opts);
-
-    let myIframe = document.getElementsByTagName("iframe");
-    let url_string = myIframe[0].src;
-    let url = new URL(document.location.href);
-    let i = url.searchParams.get("i");
-    let t = url.searchParams.get("t");
-    let adsURL = url_string + "&i=" + i + "&t=" + t;
-    myIframe[0].src = adsURL;
-    console.log(myIframe[0].src);
+    Upsell.Widget.setParams();
   </script>
 </html>
